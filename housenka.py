@@ -399,6 +399,10 @@ class App(tkinter.Tk):
             if clanek.je_nademnou(self.housenka2.get_hlava()):
                 self.destroy()
 
+        for clanek in self.housenka2.clanky:
+            if clanek.je_nademnou(self.housenka1.get_hlava()):
+                self.destroy()
+
         # krok na jedno tiknutí 2
         for jidlo in sezrane:
             self.jidla.remove(jidlo)  # každé snězené jídlo smažeme ze seznamu jídel
